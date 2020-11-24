@@ -4,12 +4,13 @@ import Link from 'next/link';
 class Deal extends Component {
     render() {
         return (
-            <div className="flex-initial mx-auto shadow-lg bg-white rounded-lg h-50 border-solid border-2 w-1/5">
+            <div className="flex-wrap m-10 shadow-lg bg-white rounded-lg h-50 border-solid border-2 w-1/5">
                 <h1 className="text-gray-900 font-bold text-xl mb-2">{this.props.nom}</h1>
-                <div>
+                <div className="flex mx-6">
                     <button onClick={this.props.increment}>+</button>
+                    <p className="mx-1">Note : {this.props.note}</p>
                     <button onClick={this.props.decrement}>-</button>
-                    <p>Note : {this.props.note}</p>
+                    
                 </div>
                 <Link href="/">
                     <a className="hover:underline text-blue-500 no-underline text-accent-1 dark:text-blue-300">

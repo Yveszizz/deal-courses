@@ -11,7 +11,6 @@ export default function IndexPage() {
          DealCourses
         </h1>
         <Deals />
-        <Article />
       </div>
     </div>
   )
