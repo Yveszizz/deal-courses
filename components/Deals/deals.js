@@ -6,9 +6,9 @@ class Deals extends Component {
 
     state = {
         deals: [
-        {id: 0, nom: "Monsieur 1", notation:0},
-        {id: 1, nom: "Monsieur 2", notation:0},
-        {id: 2, nom: "Monsieur 3", notation:0}
+        {id: 0, nom: "Monsieur 1", notation:0, price: 0, author:''},
+        {id: 1, nom: "Monsieur 2", notation:0, price: 0, author:''},
+        {id: 2, nom: "Monsieur 3", notation:0, price: 0, author:''}
         ],
     };
 
@@ -28,14 +28,14 @@ class Deals extends Component {
         const deals = this.state.deals.slice()
         const lastDeal = deals.length - 1
         const id = deals[lastDeal].id + 1
-        deals.push({id:id, nom:"deal name",notation:0})
+        deals.push({id:id, nom:"deal name",notation:0, price:0, author:''})
         this.setState({deals:deals})
     }
     
     render() {
         return (
             <div>
-                <div className="flex-col h-50 border-4">
+                <div className="flex-col overflow-auto border-4 max-w-lg">
                     {this.state.deals.map((deal, id) => {
                     return (
                         <Deal 
@@ -44,6 +44,8 @@ class Deals extends Component {
                             nom={deal.nom}
                             note={deal.notation}
                             id={deal.id}
+                            price={deal.price}
+                            author={deal.author}
                         />
                     )
                     })}

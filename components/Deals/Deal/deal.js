@@ -4,8 +4,9 @@ import Link from 'next/link';
 class Deal extends Component {
     render() {
         return (
-            <div className="flex-wrap m-10 shadow-lg bg-white rounded-lg h-50 border-solid border-2 w-1/5">
+            <div className="flex-wrap m-10 shadow-lg bg-white rounded-lg h-50 border-solid border-2 w-50">
                 <h1 className="text-gray-900 font-bold text-xl mb-2">{this.props.nom}</h1>
+                <h2>author : {this.props.author} </h2>
                 <div className="flex mx-6">
                     <button onClick={this.props.increment}>+</button>
                     <p className="mx-1">Note : {this.props.note}</p>
@@ -19,6 +20,7 @@ class Deal extends Component {
                 </Link>
                 
                 <p>Description {this.props.id} </p>
+                <p>Prix : {this.props.price} </p>
             </div>
         )
     }
