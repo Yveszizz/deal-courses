@@ -35,7 +35,7 @@ class Deals extends Component {
     render() {
         return (
             <div>
-                <div className="flex-col overflow-auto border-4 max-w-lg">
+                <div className="flex-col overflow-auto border-4 max-w-lg m-auto">
                     {this.state.deals.map((deal, id) => {
                     return (
                         <Deal 
