@@ -19,7 +19,7 @@ export default function IndexPage() {
         <h1>Toaster Review Site</h1>
       </header>
       <div>
-        <Toaster/>
+        
       </div>
     </div>
   )
